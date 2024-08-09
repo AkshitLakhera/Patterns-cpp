@@ -115,9 +115,71 @@ void print7(int n)
     }
 }
 /*pattern 8*/
+void print8(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        // space
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        // star
+        for (int j = 0; j < 2 * n - (2 * i + 1); j++)
+        {
+            cout << "*";
+        }
+        // space
+        for (int j = 0; j < i; j++)
+        {
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
+/* pattern 9*/
+void print9(int n)
+{
+    print7(n);
+    print8(n);
+}
+/*pattern 10*/
+void print10(int n)
+{
+    for (int i = 1; i <= 2 * n - 1; i++)
+    {
+        int stars = i;
+        //  after when i is greater then n we have to  break the it
+        if (i > n)
+            stars = 2 * n - i;
+
+        for (int j = 1; j <= stars; j++)
+        {
+            cout << "*";
+        }
+        cout << endl;
+    }
+}
+void print11(int n)
+{
+    int start = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (i % 2 == 0)
+            start = 1;
+        else
+            (start = 0);
+        for (int j = 0; j < i; j++)
+        {
+            cout << start;
+            start = 1 - start;
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     int n;
     cin >> n;
-    print7(n);
+    print11(n);
 }
