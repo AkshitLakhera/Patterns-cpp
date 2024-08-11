@@ -293,9 +293,105 @@ void print18(int n)
         cout << endl;
     }
 }
+void print19(int n)
+{
+    int isp = 0;
+    for (int i = 0; i < n; i++)
+    {
+        // star
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "*";
+        }
+        // space
+        for (int j = 0; j < isp; j++)
+        {
+            cout << " ";
+        };
+        // star
+        for (int j = 1; j <= n - i; j++)
+        {
+            cout << "*";
+        }
+        isp = isp + 2;
+        cout << endl;
+    }
+    isp = 2 * (n - 1);
+    for (int i = 1; i < n; i++)
+
+    {
+        // star
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        // space
+        for (int j = 0; j < isp; j++)
+        {
+            cout << " ";
+        };
+        // star
+        for (int j = 1; j <= i; j++)
+        {
+            cout << "*";
+        }
+        isp = isp - 2;
+        cout << endl;
+    }
+}
+void print20(int n)
+{
+    int space = 2 * n - 2;
+    for (int i = 1; i <= (2 * n - 1); i++)
+    {
+        int star = i;
+        if (i > n)
+        {
+            star = 2 * n - i;
+        }
+        // space
+        for (int j = 1; j <= star; j++)
+        {
+            cout << " ";
+        }
+        // start
+        for (int j = 1; j <= space; j++)
+        {
+            cout << "*";
+        };
+        // space
+        for (int j = 1; j < star; j++)
+        {
+            cout << " ";
+        }
+        if (i > n)
+            space = space + 2;
+        else
+            (space = space - 2);
+        cout << endl;
+    }
+}
+void print21(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (i == 0 || j == 0 || i == n - 1 || j == n - 1)
+            {
+                cout << "*";
+            }
+            else
+            {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     int n;
     cin >> n;
-    print18(n);
+    print21(n);
 }
