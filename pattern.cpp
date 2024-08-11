@@ -253,9 +253,49 @@ void print16(int n)
         cout << endl;
     }
 }
+void print17(int n)
+{
+    for (int i = 0; i <= n; i++)
+    {
+        // spaces
+        for (int j = 0; j <= (n - 1 - i); j++)
+        {
+            cout << " ";
+        };
+        // alphabet
+        int breakpoint = (2 * i + 1) / 2;
+        char ch = 'A';
+
+        for (int j = 1; j <= 2 * i + 1; j++)
+        {
+            cout << ch;
+            if (j <= breakpoint)
+                ch++;
+            else
+                (ch--);
+        }
+        // spaces
+        for (int j = 0; j <= (n - 1 - i); j++)
+        {
+            cout << "";
+        };
+        cout << endl;
+    }
+}
+void print18(int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (char ch = 'E' - i; ch <= 'E'; ch++)
+        {
+            cout << ch;
+        }
+        cout << endl;
+    }
+}
 int main()
 {
     int n;
     cin >> n;
-    print14(n);
+    print18(n);
 }
